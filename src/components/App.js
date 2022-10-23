@@ -58,24 +58,25 @@ const App = () => {
       }
   }
   return (
-    
     <div id="main">
-      <form>
-        <p>{errorMessage}</p>
-        <label>Name :</label>
-        <input data-testid='name' type='text' onChange={(e)=>handle(e)}></input>
-        <br/><br/>
-        <label>Email :</label>
-        <input data-testid='email' type='email' onChange={(e)=>handleEmail(e)}></input>
-        <br/><br/>
-        <label>Gender : </label>
-        <select data-testid = 'gender' value={gender} onChange={(e) => setGender(e.target.value)}>
+       <form>
+         <p>{errorMessage}</p>
+          <label>Name : </label> 
+          <input data-testid = 'name' type='text' onChange={(e) => handleName(e)}></input>
+          <br/><br/>
+          <label>Email : </label>
+          <input data-testid = 'email' type='email' onChange={(e) => handleEmail(e)}></input>
+          <br/>
+          <br/>
+          <label>Gender : </label>
+          <select data-testid = 'gender' value={gender} onChange={(e) => setGender(e.target.value)}>
            {genders.map((gender) => (
               <option key={gender} value={gender}>{gender}</option>
            )
            )}
           </select>
-          <br/><br/>
+          <br/>
+          <br/>
           <label>Phone No. : </label>
           <input data-testid = 'phoneNumber' type='phone' onChange={(e) => handlePhone(e)}></input>
           <br/>
@@ -85,7 +86,7 @@ const App = () => {
           <br/> 
           <br/>
           <button  data-testid = 'submit' onClick={(e) => handleClick(e)}>Submit</button>
-      </form>
+       </form>
     </div>
   )
 }
